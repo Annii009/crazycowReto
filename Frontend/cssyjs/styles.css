@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+body {
+  
+  margin: 0;
+  padding: 0;
+  background-color: #fff9e6; 
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 98%;
+  z-index: 10;
+}
+
+/* Estilo del logo */
+.logo-container {
+  display: inline-block;
+}
+
+.logo {
+  height: 130px;
+  width: auto;
+}
+
+/* Contenedor de los botones */
+.button-container {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Botones como texto */
+.nav-button {
+  background: none; 
+  border: none; 
+  padding: 0;
+  margin: 20px; 
+  font-size: 1.3rem;
+  font-family: 'Lato';
+  color: #52375b; 
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+.nav-button:hover {
+  color: #551e4a; 
+  transform: scale(1.1); 
+}
+
+
+/* Estilo del botón con imagen */
+.basket-button {
+  background: none;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.basket-icon {
+  height: 40px;
+  width: auto;
+}
+
+/* Contenedor central */
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: 70px; /* Ajusta si existe un header fijo */
+  text-align: center;
+  position: relative;
+}
+
+/* Imagen central (hamburguesa) */
+.central-image {
+  width: 36%; /* Tamaño de la imagen */
+  height: auto; /* Mantiene proporciones */
+  position: relative;
+  z-index: 2; /* Imagen por encima de la mayoría de los elementos */
+}
+
+/* Texto central */
+.central-text {
+  font-size: 14rem; /* Tamaño del texto */
+  letter-spacing: 0.2em; /* Espaciado entre letras */
+  font-weight: bold; /* Negrita */
+  font-family: 'Luckiest Guy', cursive; /* Fuente divertida */
+  color: #52375b; /* Color púrpura oscuro */
+  position: absolute; /* Texto superpuesto a la imagen */
+  transform: translateY(-50%); /* Centra verticalmente */
+  z-index: 3; /* Por defecto está encima de la imagen */
+  display: flex;
+  justify-content: center;
+}
+
+/* Letra C específica */
+.central-text .under-image {
+  z-index: 1; /* Capa por debajo de la imagen */
+  position: relative; /* Posición relativa dentro del texto */
+}
