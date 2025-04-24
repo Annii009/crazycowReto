@@ -1,12 +1,12 @@
-const express = require('express');
+ const express = require('express');
 const cors = require('cors');
 const app = express();
 app.use(cors());
 app.use(express.json())
 const port = 3000;
 
-{
-  "burgers": [
+const data = {
+  burgers: [
     {
       "id": 1,
       "name": "Paca BBQ",
@@ -142,13 +142,9 @@ const port = 3000;
       "allergens": ["gluten", "dairy"],
       "price": 11.99
     }
-  ]
-}
+  ],
 
-
-
-{
-  "desserts": [
+  desserts: [
     {
       "id": 1,
       "name": "Bacon Sundae",
@@ -239,12 +235,10 @@ const port = 3000;
       "allergens": ["dairy"],
       "price": 6.49
     }
-  ]
-}
+  ],
 
 
-
-{ "For bitting": [
+forBiting: [
   {
     "id": 13,
     "name": "Cheese Fries",
@@ -353,11 +347,10 @@ const port = 3000;
     "allergens": [],
     "price": 4.99
   }
-]
-}
+],
 
 
-[
+drinks: [
   {
     "id": 25,
     "name": "Draft Beer",
@@ -439,4 +432,42 @@ const port = 3000;
     "allergens": ["dairy"],
     "price": 5.99
   }
-]
+],
+};
+
+
+app.get('/burgers', (req, res) => {
+  res.json(data.burgers);
+});
+
+app.get('/desserts', (req, res) => {
+  res.json(data.desserts);
+}
+);
+
+app.get('/forBiting', (req, res) => {
+  res.json(data.forBiting);
+}); 
+
+app.get('/drinks', (req, res) => {
+  res.json(data.drinks);
+});
+
+
+
+app.listen(port, () => {
+  console.log(`API temporal corriendo en http://localhost:${port}`);
+});
+
+app.listen(port, () => {
+  console.log(`API funcionando en http://localhost:${port}`);
+  console.log(`Rutas disponibles:`);
+  console.log(`- http://localhost:${port}/burgers`);
+  console.log(`- http://localhost:${port}/desserts`);
+  console.log(`- http://localhost:${port}/forBiting`);
+  console.log(`- http://localhost:${port}/drinks`);
+});
+
+
+
+  
