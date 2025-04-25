@@ -1,9 +1,14 @@
- const express = require('express');
+const express = require('express');
 const cors = require('cors');
 const app = express();
+const path = require('path'); //
 app.use(cors());
 app.use(express.json())
 const port = 3000;
+
+//Configuracion para servir imagenes 
+app.use('/imagenes', express.static(path.join(__dirname, '../../frontend/imagenes')));//
+
 
 const data = {
   burgers: [
@@ -12,7 +17,7 @@ const data = {
       "name": "Paca BBQ",
       "description": "A smoky and sweet explosion of flavor with irresistible bacon and BBQ sauce.",
       "ingredients": ["bun", "beef patty", "bacon", "cheddar cheese", "BBQ sauce"],
-      "image": "../imagenes/burgerfondo1.png",
+      "image": "http://localhost:3000/imagenes/burguerfondo1.png", //
       "allergens": ["gluten", "dairy"],
       "price": 11.99
     },
@@ -21,7 +26,7 @@ const data = {
       "name": "Spicy Cow",
       "description": "Just the right touch of spiciness with jalapeños to awaken your senses.",
       "ingredients": ["bun", "beef patty", "jalapeños", "lettuce", "cheddar cheese"],
-      "image": "../imagenes/burguerfondo2.png",
+      "image": "http://localhost:3000/imagenes/burguerfondo1.png",
       "allergens": ["gluten", "dairy"],
       "price": 10.99
     },
@@ -30,7 +35,7 @@ const data = {
       "name": "Double Cow Deluxe",
       "description": "For meat lovers: double the pleasure in every bite.",
       "ingredients": ["bun", "double beef patty", "lettuce", "Swiss cheese", "caramelized onions"],
-      "image": "../imagenes/burguerfondo3.png",
+      "image": "http://localhost:3000/imagenes/burguerfondo1.png",
       "allergens": ["gluten", "dairy"],
       "price": 13.99
     },
@@ -39,7 +44,7 @@ const data = {
       "name": "Paca Rancher",
       "description": "A ranch classic with a delightful mix of fresh flavors.",
       "ingredients": ["bun", "beef patty", "ranch sauce", "cheddar cheese", "tomato"],
-      "image": "../imagenes/burguerfondo4.png",
+      "image": "http://localhost:3000/imagenes/burguerfondo1.png",
       "allergens": ["gluten", "dairy"],
       "price": 10.99
     },
@@ -48,7 +53,7 @@ const data = {
       "name": "Veggie Paca",
       "description": "The perfect veggie option, fresh and delicious.",
       "ingredients": ["bun", "veggie burger patty", "lettuce", "tomato", "onion"],
-      "image": "../imagenes/burguerfondo5.png",
+      "image": "http://localhost:3000/imagenes/burguerfondo1.png",
       "allergens": ["gluten"],
       "price": 10.49
     },
@@ -57,7 +62,7 @@ const data = {
       "name": "Moozarella Supreme",
       "description": "A gourmet experience with the creamy touch of mozzarella.",
       "ingredients": ["bun", "beef patty", "mozzarella cheese", "pesto sauce", "arugula"],
-      "image": "../imagenes/burguerfondo6.png",
+      "image": "http://localhost:3000/imagenes/burguerfondo1.png",
       "allergens": ["gluten", "dairy"],
       "price": 12.49
     },
@@ -66,7 +71,7 @@ const data = {
       "name": "Tender Classic",
       "description": "Simple and nostalgic, like a good classic burger should be.",
       "ingredients": ["bun", "beef patty", "cheddar cheese", "ketchup", "mustard", "pickles"],
-      "image": "../imagenes/burguerfondo7.png",
+      "image": "http://localhost:3000/imagenes/burguerfondo1.png",
       "allergens": ["gluten", "dairy"],
       "price": 9.99
     },
@@ -75,7 +80,7 @@ const data = {
       "name": "Mediterranean Paca",
       "description": "A trip to the Mediterranean in every bite.",
       "ingredients": ["bun", "lamb patty", "feta cheese", "sun-dried tomatoes", "olives"],
-      "image": "../imagenes/burguerfondo8.png",
+      "image": "http://localhost:3000/imagenes/burguerfondo1.png",
       "allergens": ["gluten", "dairy"],
       "price": 12.99
     },
@@ -84,7 +89,7 @@ const data = {
       "name": "Smoked Cow",
       "description": "Smoky and delicious, perfect for a special touch.",
       "ingredients": ["bun", "smoked beef patty", "gouda cheese", "red onion", "mustard sauce"],
-      "image": "../imagenes/burguerfondo9.png",
+      "image": "http://localhost:3000/imagenes/burguerfondo1.png",
       "allergens": ["gluten", "dairy"],
       "price": 11.99
     },
@@ -93,7 +98,7 @@ const data = {
       "name": "Tropical Paca",
       "description": "Sweet and savory, with a tropical explosion thanks to pineapple.",
       "ingredients": ["bun", "beef patty", "pineapple", "cheddar cheese", "teriyaki sauce"],
-      "image": "../imagenes/burguerfondo10.png",
+      "image": "http://localhost:3000/imagenes/burguerfondo1.png",
       "allergens": ["gluten", "dairy"],
       "price": 11.49
     },
@@ -102,7 +107,7 @@ const data = {
       "name": "Mooo Mexican",
       "description": "Packed with Mexican flavor with guacamole and jalapeños.",
       "ingredients": ["bun", "beef patty", "guacamole", "beans", "jalapeños", "cheddar cheese"],
-      "image": "../imagenes/bugerfondo11.png",
+      "image": "http://localhost:3000/imagenes/burguerfondo1.png",
       "allergens": ["gluten", "dairy"],
       "price": 11.99
     },
@@ -111,7 +116,7 @@ const data = {
       "name": "Truffle Paca",
       "description": "Elegant and refined, with the unmistakable aroma of truffle.",
       "ingredients": ["bun", "beef patty", "brie cheese", "truffle sauce", "arugula"],
-      "image": "../imagenes/burgerfondo12.png",
+      "image": "http://localhost:3000/imagenes/burguerfondo1.png",
       "allergens": ["gluten", "dairy"],
       "price": 14.99
     },
@@ -150,7 +155,7 @@ const data = {
       "name": "Bacon Sundae",
       "description": "A sweet and savory treat featuring vanilla ice cream topped with fries and caramel drizzle.",
       "ingredients": ["vanilla ice cream", "french fries", "caramel sauce"],
-      "image": "../images/bacon_sundae.png",
+      "image": "../imagenes/bebida1.png",
       "allergens": ["dairy", "gluten"],
       "price": 6.99
     },
