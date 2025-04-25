@@ -22,7 +22,8 @@ body {
 header{
     display: flex;
     justify-content: space-between;
-    height: 27vh;; 
+    height: 10%;
+
 }
 
 header a{
@@ -33,32 +34,29 @@ header a{
 .subtitle{
     display: flex;
     position: relative;
-    height: 3em;
-    top: 1vh;
     font: inherit;
     color: #551e4a;
     text-decoration: none;
-    font-size: 2em;
+    font-size: 3vh;
     padding: 1%;
     left: 1%;
+    top: 1vh;
     font-family: "Playfair", serif;
 }
 
 .bt-back {
     display: flex;
     position: relative;
-    height: 3em;
-    align-items: center;
-    justify-content: center;
-    top: 10%;
+    align-items: center;   
     right: 1.5%;
     padding: 1em;
-    font: inherit;
     color: #551e4a;
     border: solid 2px #551e4a;
     background-color: transparent;
     text-decoration: none;
     border-radius: 50px;
+    height: 3em;
+    margin-top: 2vh;
 
 }
 
@@ -68,6 +66,57 @@ header a{
     transition: all 0.3s ease-in-out;
 }
 
+/* TITLE-PAGE */
+.title-page{
+    text-align: center;
+    font-family: "Playfair",sans-serif;
+    font-size: 3vh;
+    margin-bottom: 3%;
+    margin-top: 2%;
+    color: #551e4a;
+}
+
+
+/* CONTAINER CATEGORIES */
+
+.container-buttons{
+    display: flex;
+    text-align: center;
+    font-size: 1.4vh;
+    justify-content: center;
+    gap: 4vw;
+    margin-bottom: 3%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #52375b;
+    border-radius: 50px;
+}
+
+
+.buttons a {
+    border-radius: 50px;
+    font-size: 1em;
+    padding: 2%;
+    text-align: center;
+    border: solid 2px white;
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+
+}
+
+
+.buttons a:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
 
 /* COMPROBATION CARD */
 
@@ -174,6 +223,38 @@ header a{
 }
 
 
+/* DELETE BURGUER ************************************ */
+
+.name{
+    text-align: center;
+    font-family: "Playfair",sans-serif;
+    font-size: 1.6em;
+    margin-bottom: 5%;
+}
+
+.modern-form img{
+    margin-bottom: 6%;
+}
+
+.modern-form button{
+    
+    background-color: transparent;
+    color: #52375b;
+    border:solid 2px #52375b;
+    border-radius: 50px;
+    padding: 0.5em 1.5em;
+    cursor: pointer;
+    font-size: 1.2em;
+    width: 80%;
+    margin: 0 auto 1rem auto; 
+    transition: all 0.3s ease-in-out;
+}
+
+.modern-form button:hover{
+    transform: scale(1.05);
+}
+
+
 /* Animation (sacudida: se aplica cuando los campos de entrada son invalidos) */
 @keyframes shake {
 
@@ -225,37 +306,3 @@ header a{
 }
 
 
-/* DELETE BURGUER ************************************ */
-
-
-.name{
-    text-align: center;
-    font-family: "Playfair",sans-serif;
-    font-size: 1.6em;
-    margin-bottom: 5%;
-}
-
-
-.modern-form img{
-    margin-bottom: 6%;
-}
-
-
-.modern-form button{
-   
-    background-color: transparent;
-    color: #52375b;
-    border:solid 2px #52375b;
-    border-radius: 50px;
-    padding: 0.5em 1.5em;
-    cursor: pointer;
-    font-size: 1.2em;
-    width: 80%;
-    margin: 0 auto 1rem auto;
-    transition: all 0.3s ease-in-out;
-}
-
-
-.modern-form button:hover{
-    transform: scale(1.05);
-}
