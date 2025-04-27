@@ -16,6 +16,7 @@
     <link rel="icon" href="../imagenes/fav-icon.png">
     
     <script src="../js/script.js"></script>
+    
 </head>
 
 <body>
@@ -24,10 +25,13 @@
         <div class="header-left">
             <img src="../imagenes/logo2oscuro.png" alt="Logo" class="header-logo">
         </div>
+    
         <nav class="nav-container">
+            <!-- Hamburguer button -->
             <button class="nav-toggle" id="navToggle">
                 <span class="hamburger"></span>
             </button>
+            <!-- Nav bar-->
             <ul id="navMenu">
                 <li><a href="../html/index.html#restaurants" class="nav-button">Restaurants</a></li>
                 <li><a href="../html/index.html" class="nav-button">Menu</a></li>
@@ -46,22 +50,35 @@
         <div class="image-box">
             <img src="../imagenes/burguercayendo.png" alt="Descripción de la imagen">
         </div>
+        <!--REGISTRATION FORM  -->
         <div class="login-register">
             <form class="modern-form">
                 <div class="form-title">Sign Up</div>
 
                 <div class="form-body">
+                    <!-- USERNAME INPUT -->
                     <div class="input-group">
                         <div class="input-wrapper">
+                            <!-- SVG tag is used for vectorial graphics -->
+                            <!-- viewbox defines the space in coordinates -->
+                            <!-- fill: specifies the fill color-->
                             <svg fill="none" viewBox="0 0 24 24" class="input-icon">
+
+                                <!-- CIRCLE tag is used to draw circles -->
+                                <!-- cx: defines horizontal the position of the center of the circle-->
+                                <!-- cy: defines vertical the position of the center of the circle -->
+                                <!-- r: defines the  radius of the circle-->
+                                <!--stroke=defines the color of circle border  -->
+
                                 <circle stroke-width="1.5" stroke="currentColor" r="4" cy="8" cx="12"></circle>
+                                <!-- PATH tag is used to draw complicated and custom shapes. The shape is defined by the d attribute -->
                                 <path stroke-linecap="round" stroke-width="1.5" stroke="currentColor"
                                     d="M5 20C5 17.2386 8.13401 15 12 15C15.866 15 19 17.2386 19 20"></path>
                             </svg>
                             <input required placeholder="Username" class="form-input" type="text">
                         </div>
                     </div>
-
+                    <!-- EMAIL INPUT -->
                     <div class="input-group">
                         <div class="input-wrapper">
                             <svg fill="none" viewBox="0 0 24 24" class="input-icon">
@@ -72,7 +89,7 @@
                             <input required placeholder="Email" class="form-input" type="email">
                         </div>
                     </div>
-
+                    <!-- PASSWORD INPUT -->
                     <div class="input-group">
                         <div class="input-wrapper">
                             <svg fill="none" viewBox="0 0 24 24" class="input-icon">

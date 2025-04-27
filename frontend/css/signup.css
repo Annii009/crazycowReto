@@ -39,8 +39,9 @@ header {
     position: relative;
 }
 
+/* Initial status (close) ***************************/
 .nav-toggle {
-    display: none;
+    display: none;  /*Hidden  by default*/
     background: none;
     border: none;
     cursor: pointer;
@@ -49,6 +50,7 @@ header {
     height: 40px;
 }
 
+/* Central bar of the hamburger menu */
 .hamburger {
     display: block;
     width: 30px;
@@ -58,6 +60,7 @@ header {
     transition: all 0.3s ease;
 }
 
+/* Upper and lower bars */
 .hamburger::before,
 .hamburger::after {
     content: '';
@@ -69,22 +72,29 @@ header {
 }
 
 .hamburger::before {
+    /* Upper bar position */
     transform: translateY(-10px);
 }
 
 .hamburger::after {
+    /* Lower bar Position */
     transform: translateY(10px);
 }
 
+/* Active status(open) *************************************/
+
 .nav-toggle.active .hamburger {
-    background-color: transparent;
+    /*Hides central bar  */
+    background-color: transparent; 
 }
 
 .nav-toggle.active .hamburger::before {
+    /* Rotate the upper bar 45 degrees */
     transform: rotate(45deg);
 }
 
 .nav-toggle.active .hamburger::after {
+    /* Rotate the lowe bar -45 degrees */
     transform: rotate(-45deg);
 }
 

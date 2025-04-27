@@ -475,4 +475,32 @@ app.listen(port, () => {
 
 
 
-  
+// EMPLOYEE REGISTER
+
+//Employee data in JSON
+const employees = {
+employees:[]
+};
+
+// Endpoint to register an employee
+app.post('/register', (req, res) => {
+  const { username, password, email } = req.body;
+
+  //Check all data are present
+  if (!username || !password || !email) {
+    return res.status(400).json({ message: "All fields are required" });
+  }
+
+  // Add to temp JSON of employees
+  const newEmployee = {
+    id: employees.employees.length + 1, // Assign a unique ID
+    username,
+    password,
+    email
+  };
+  employees.employees.push(newEmployee);
+
+  res.status(201).json({ message: "User registered successfully", employee: newEmployee });
+});
+
+app.get('/user')
