@@ -61,11 +61,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // 3. Handling of the registration form
-    const form = document.querySelector('.modern-form');
+    // 3. Register form
+   
+    const RegisterButton = document.querySelector('.submit-button');
     
-    if (form) {
-        form.addEventListener('submit', async function(e) {
+    if (RegisterButton) {
+        RegisterButton.addEventListener('click', async function(e) {
             e.preventDefault();
 
             // Values of the form
@@ -98,6 +99,52 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     const error = await response.json();
                     alert(error.message || 'Error registering user');
+                }
+            } catch (error) {
+                console.error('Error in the application:', error);
+                alert('There was a problem connecting to the server.');
+            }
+        });
+    }
+
+
+    // 4. Login register
+
+    // const form = document.querySelector('.modern-form');
+    const LoginButton = document.querySelector(".login-button");
+
+    if (LoginButton) {
+        LoginButton.addEventListener('click', async function (e) {
+            e.preventDefault();
+
+            // Values of the form
+
+            const email = document.querySelector('input[placeholder="Email"]')?.value;
+            const password = document.querySelector('input[placeholder="Password"]')?.value;
+
+            // Basic Check
+            if (!email || !password) {
+                alert('Please complete all fields');
+                return;
+            }
+
+            const userData = { email, password };
+
+            try {
+                const response = await fetch('http://localhost:3000/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(userData)
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    alert(result.message); // Show succes messaje
+                    console.log(result.employee); // Show employee data
+                }
+                else {
+                    const errorData = await response.json();
+                    alert(errorData.message);
                 }
             } catch (error) {
                 console.error('Error in the application:', error);

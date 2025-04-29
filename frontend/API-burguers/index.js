@@ -1,5 +1,5 @@
 const express = require('express');
-const cors = require('cors');
+const cors = require('cors'); 
 const app = express();
 const path = require('path'); //
 app.use(cors());
@@ -120,33 +120,7 @@ const data = {
       "allergens": ["gluten", "dairy"],
       "price": 14.99
     },
-    {
-      "id": 13,
-      "name": "The Shepherd",
-      "description": "A burger with pastoral inspiration, fresh and aromatic.",
-      "ingredients": ["bun", "lamb patty", "mint", "feta cheese", "tzatziki sauce"],
-      "image": "../imagenes/burgerfondo13.png",
-      "allergens": ["gluten", "dairy"],
-      "price": 13.49
-    },
-    {
-      "id": 14,
-      "name": "Asian Cow",
-      "description": "Exotic with a touch of the Orient in every bite.",
-      "ingredients": ["bun", "beef patty", "soy sauce", "coleslaw", "ginger"],
-      "image": "../imagenes/burgerfondo14.png",
-      "allergens": ["gluten"],
-      "price": 11.49
-    },
-    {
-      "id": 15,
-      "name": "Texan Paca",
-      "description": "The rustic flavor of the Wild West in a delicious bite.",
-      "ingredients": ["bun", "beef patty", "cheddar cheese", "onion rings", "BBQ sauce"],
-      "image": "../imagenes/burgerfondo2.png",
-      "allergens": ["gluten", "dairy"],
-      "price": 11.99
-    }
+
   ],
 
   desserts: [
@@ -155,7 +129,7 @@ const data = {
       "name": "Bacon Sundae",
       "description": "A sweet and savory treat featuring vanilla ice cream topped with fries and caramel drizzle.",
       "ingredients": ["vanilla ice cream", "french fries", "caramel sauce"],
-      "image": "../imagenes/bebida1.png",
+      "image": "http://localhost:3000/imagenes/postre1.png",
       "allergens": ["dairy", "gluten"],
       "price": 6.99
     },
@@ -243,201 +217,201 @@ const data = {
   ],
 
 
-forBiting: [
-  {
-    "id": 13,
-    "name": "Cheese Fries",
-    "description": "Golden french fries smothered in melted cheese sauce.",
-    "ingredients": ["potatoes", "cheese sauce", "vegetable oil"],
-    "image": "../images/cheese_fries.png",
-    "allergens": ["dairy"],
-    "price": 5.99
-  },
-  {
-    "id": 14,
-    "name": "Spring Rolls",
-    "description": "Crispy spring rolls served with sweet chili dipping sauce.",
-    "ingredients": ["spring roll wrappers", "vegetables", "vegetable oil", "sweet chili sauce"],
-    "image": "../images/spring_rolls.png",
-    "allergens": ["gluten"],
-    "price": 6.99
-  },
-  {
-    "id": 15,
-    "name": "Mozzarella Sticks",
-    "description": "Breaded and fried mozzarella sticks served with marinara dipping sauce.",
-    "ingredients": ["mozzarella cheese", "breadcrumbs", "vegetable oil", "marinara sauce"],
-    "image": "../images/mozzarella_sticks.png",
-    "allergens": ["dairy", "gluten"],
-    "price": 7.49
-  },
-  {
-    "id": 16,
-    "name": "Classic French Fries",
-    "description": "Perfectly crispy golden french fries.",
-    "ingredients": ["potatoes", "vegetable oil", "salt"],
-    "image": "../images/classic_fries.png",
-    "allergens": [],
-    "price": 3.99
-  },
-  {
-    "id": 17,
-    "name": "Shoestring Fries",
-    "description": "Thin-cut shoestring fries served in a black bowl.",
-    "ingredients": ["potatoes", "vegetable oil", "salt"],
-    "image": "../images/shoestring_fries.png",
-    "allergens": [],
-    "price": 3.99
-  },
-  {
-    "id": 18,
-    "name": "Loaded Nachos",
-    "description": "Crispy tortilla chips topped with cheese, jalapeños, and dipping sauces.",
-    "ingredients": ["tortilla chips", "cheese", "jalapeños", "salsa", "sour cream"],
-    "image": "../images/loaded_nachos.png",
-    "allergens": ["dairy", "gluten"],
-    "price": 8.99
-  },
-  {
-    "id": 19,
-    "name": "Seasoned Fries",
-    "description": "Golden french fries tossed in special seasoning.",
-    "ingredients": ["potatoes", "vegetable oil", "special seasoning blend"],
-    "image": "../images/seasoned_fries.png",
-    "allergens": [],
-    "price": 4.49
-  },
-  {
-    "id": 20,
-    "name": "Mini Hot Dogs",
-    "description": "Mini sausages served with dipping sauce on a green plate.",
-    "ingredients": ["mini sausages", "vegetable oil", "ketchup"],
-    "image": "../images/mini_hot_dogs.png",
-    "allergens": ["meat"],
-    "price": 6.99
-  },
-  {
-    "id": 21,
-    "name": "Chicken Nuggets",
-    "description": "Crispy chicken nuggets served with two dipping sauces.",
-    "ingredients": ["chicken", "breadcrumbs", "vegetable oil", "ketchup", "mustard"],
-    "image": "../images/chicken_nuggets.png",
-    "allergens": ["gluten"],
-    "price": 7.49
-  },
-  {
-    "id": 22,
-    "name": "Onion Rings",
-    "description": "Crispy battered onion rings.",
-    "ingredients": ["onions", "batter", "vegetable oil"],
-    "image": "../images/onion_rings.png",
-    "allergens": ["gluten"],
-    "price": 4.99
-  },
-  {
-    "id": 23,
-    "name": "Appetizer Sampler",
-    "description": "Assorted fried appetizers including onion rings and cheese balls with dipping sauces.",
-    "ingredients": ["onion rings", "cheese balls", "breadcrumbs", "vegetable oil", "dipping sauces"],
-    "image": "../images/appetizer_sampler.png",
-    "allergens": ["dairy", "gluten"],
-    "price": 12.99
-  },
-  {
-    "id": 24,
-    "name": "Specialty Fries",
-    "description": "Dark-colored specialty fries with unique seasoning.",
-    "ingredients": ["potatoes", "vegetable oil", "special seasoning blend", "herbs"],
-    "image": "../images/specialty_fries.png",
-    "allergens": [],
-    "price": 4.99
-  }
-],
+  forBiting: [
+    {
+      "id": 13,
+      "name": "Cheese Fries",
+      "description": "Golden french fries smothered in melted cheese sauce.",
+      "ingredients": ["potatoes", "cheese sauce", "vegetable oil"],
+      "image": "../images/cheese_fries.png",
+      "allergens": ["dairy"],
+      "price": 5.99
+    },
+    {
+      "id": 14,
+      "name": "Spring Rolls",
+      "description": "Crispy spring rolls served with sweet chili dipping sauce.",
+      "ingredients": ["spring roll wrappers", "vegetables", "vegetable oil", "sweet chili sauce"],
+      "image": "../images/spring_rolls.png",
+      "allergens": ["gluten"],
+      "price": 6.99
+    },
+    {
+      "id": 15,
+      "name": "Mozzarella Sticks",
+      "description": "Breaded and fried mozzarella sticks served with marinara dipping sauce.",
+      "ingredients": ["mozzarella cheese", "breadcrumbs", "vegetable oil", "marinara sauce"],
+      "image": "../images/mozzarella_sticks.png",
+      "allergens": ["dairy", "gluten"],
+      "price": 7.49
+    },
+    {
+      "id": 16,
+      "name": "Classic French Fries",
+      "description": "Perfectly crispy golden french fries.",
+      "ingredients": ["potatoes", "vegetable oil", "salt"],
+      "image": "../images/classic_fries.png",
+      "allergens": [],
+      "price": 3.99
+    },
+    {
+      "id": 17,
+      "name": "Shoestring Fries",
+      "description": "Thin-cut shoestring fries served in a black bowl.",
+      "ingredients": ["potatoes", "vegetable oil", "salt"],
+      "image": "../images/shoestring_fries.png",
+      "allergens": [],
+      "price": 3.99
+    },
+    {
+      "id": 18,
+      "name": "Loaded Nachos",
+      "description": "Crispy tortilla chips topped with cheese, jalapeños, and dipping sauces.",
+      "ingredients": ["tortilla chips", "cheese", "jalapeños", "salsa", "sour cream"],
+      "image": "../images/loaded_nachos.png",
+      "allergens": ["dairy", "gluten"],
+      "price": 8.99
+    },
+    {
+      "id": 19,
+      "name": "Seasoned Fries",
+      "description": "Golden french fries tossed in special seasoning.",
+      "ingredients": ["potatoes", "vegetable oil", "special seasoning blend"],
+      "image": "../images/seasoned_fries.png",
+      "allergens": [],
+      "price": 4.49
+    },
+    {
+      "id": 20,
+      "name": "Mini Hot Dogs",
+      "description": "Mini sausages served with dipping sauce on a green plate.",
+      "ingredients": ["mini sausages", "vegetable oil", "ketchup"],
+      "image": "../images/mini_hot_dogs.png",
+      "allergens": ["meat"],
+      "price": 6.99
+    },
+    {
+      "id": 21,
+      "name": "Chicken Nuggets",
+      "description": "Crispy chicken nuggets served with two dipping sauces.",
+      "ingredients": ["chicken", "breadcrumbs", "vegetable oil", "ketchup", "mustard"],
+      "image": "../images/chicken_nuggets.png",
+      "allergens": ["gluten"],
+      "price": 7.49
+    },
+    {
+      "id": 22,
+      "name": "Onion Rings",
+      "description": "Crispy battered onion rings.",
+      "ingredients": ["onions", "batter", "vegetable oil"],
+      "image": "../images/onion_rings.png",
+      "allergens": ["gluten"],
+      "price": 4.99
+    },
+    {
+      "id": 23,
+      "name": "Appetizer Sampler",
+      "description": "Assorted fried appetizers including onion rings and cheese balls with dipping sauces.",
+      "ingredients": ["onion rings", "cheese balls", "breadcrumbs", "vegetable oil", "dipping sauces"],
+      "image": "../images/appetizer_sampler.png",
+      "allergens": ["dairy", "gluten"],
+      "price": 12.99
+    },
+    {
+      "id": 24,
+      "name": "Specialty Fries",
+      "description": "Dark-colored specialty fries with unique seasoning.",
+      "ingredients": ["potatoes", "vegetable oil", "special seasoning blend", "herbs"],
+      "image": "../images/specialty_fries.png",
+      "allergens": [],
+      "price": 4.99
+    }
+  ],
 
 
-drinks: [
-  {
-    "id": 25,
-    "name": "Draft Beer",
-    "description": "Refreshing golden draft beer served in a chilled mug.",
-    "ingredients": ["barley", "hops", "water", "yeast"],
-    "image": "../images/draft_beer.png",
-    "allergens": ["gluten"],
-    "price": 4.99
-  },
-  {
-    "id": 26,
-    "name": "Cola Bottle",
-    "description": "Classic cola in an iconic glass bottle.",
-    "ingredients": ["carbonated water", "high fructose corn syrup", "caramel color", "phosphoric acid", "natural flavors"],
-    "image": "../images/cola_bottle.png",
-    "allergens": [],
-    "price": 2.99
-  },
-  {
-    "id": 27,
-    "name": "Cranberry Spritzer",
-    "description": "Refreshing cranberry juice cocktail with a splash of soda.",
-    "ingredients": ["cranberry juice", "soda water", "lime", "ice"],
-    "image": "../images/cranberry_spritzer.png",
-    "allergens": [],
-    "price": 3.99
-  },
-  {
-    "id": 28,
-    "name": "Sunset Iced Tea",
-    "description": "Vibrant layered iced tea with citrus and grenadine.",
-    "ingredients": ["iced tea", "orange juice", "grenadine", "ice"],
-    "image": "../images/sunset_tea.png",
-    "allergens": [],
-    "price": 4.49
-  },
-  {
-    "id": 29,
-    "name": "Cream Soda",
-    "description": "Smooth and creamy vanilla soda with ice.",
-    "ingredients": ["carbonated water", "cream extract", "vanilla", "sugar", "ice"],
-    "image": "../images/cream_soda.png",
-    "allergens": [],
-    "price": 3.49
-  },
-  {
-    "id": 30,
-    "name": "Classic Cola",
-    "description": "Traditional cola in a glass bottle.",
-    "ingredients": ["carbonated water", "high fructose corn syrup", "caramel color", "phosphoric acid", "natural flavors"],
-    "image": "../images/classic_cola.png",
-    "allergens": [],
-    "price": 2.99
-  },
-  {
-    "id": 31,
-    "name": "Amber Ale",
-    "description": "Rich amber-colored ale with a smooth finish.",
-    "ingredients": ["barley", "hops", "water", "yeast"],
-    "image": "../images/amber_ale.png",
-    "allergens": ["gluten"],
-    "price": 5.49
-  },
-  {
-    "id": 32,
-    "name": "Strawberry Lemonade",
-    "description": "Sweet and tangy lemonade infused with fresh strawberries.",
-    "ingredients": ["lemon juice", "strawberries", "sugar", "water", "ice"],
-    "image": "../images/strawberry_lemonade.png",
-    "allergens": [],
-    "price": 4.49
-  },
-  {
-    "id": 33,
-    "name": "Root Beer Float",
-    "description": "Classic root beer with a scoop of vanilla ice cream.",
-    "ingredients": ["root beer", "vanilla ice cream"],
-    "image": "../images/root_beer_float.png",
-    "allergens": ["dairy"],
-    "price": 5.99
-  }
-],
+  drinks: [
+    {
+      "id": 25,
+      "name": "Draft Beer",
+      "description": "Refreshing golden draft beer served in a chilled mug.",
+      "ingredients": ["barley", "hops", "water", "yeast"],
+      "image": "../images/draft_beer.png",
+      "allergens": ["gluten"],
+      "price": 4.99
+    },
+    {
+      "id": 26,
+      "name": "Cola Bottle",
+      "description": "Classic cola in an iconic glass bottle.",
+      "ingredients": ["carbonated water", "high fructose corn syrup", "caramel color", "phosphoric acid", "natural flavors"],
+      "image": "../images/cola_bottle.png",
+      "allergens": [],
+      "price": 2.99
+    },
+    {
+      "id": 27,
+      "name": "Cranberry Spritzer",
+      "description": "Refreshing cranberry juice cocktail with a splash of soda.",
+      "ingredients": ["cranberry juice", "soda water", "lime", "ice"],
+      "image": "../images/cranberry_spritzer.png",
+      "allergens": [],
+      "price": 3.99
+    },
+    {
+      "id": 28,
+      "name": "Sunset Iced Tea",
+      "description": "Vibrant layered iced tea with citrus and grenadine.",
+      "ingredients": ["iced tea", "orange juice", "grenadine", "ice"],
+      "image": "../images/sunset_tea.png",
+      "allergens": [],
+      "price": 4.49
+    },
+    {
+      "id": 29,
+      "name": "Cream Soda",
+      "description": "Smooth and creamy vanilla soda with ice.",
+      "ingredients": ["carbonated water", "cream extract", "vanilla", "sugar", "ice"],
+      "image": "../images/cream_soda.png",
+      "allergens": [],
+      "price": 3.49
+    },
+    {
+      "id": 30,
+      "name": "Classic Cola",
+      "description": "Traditional cola in a glass bottle.",
+      "ingredients": ["carbonated water", "high fructose corn syrup", "caramel color", "phosphoric acid", "natural flavors"],
+      "image": "../images/classic_cola.png",
+      "allergens": [],
+      "price": 2.99
+    },
+    {
+      "id": 31,
+      "name": "Amber Ale",
+      "description": "Rich amber-colored ale with a smooth finish.",
+      "ingredients": ["barley", "hops", "water", "yeast"],
+      "image": "../images/amber_ale.png",
+      "allergens": ["gluten"],
+      "price": 5.49
+    },
+    {
+      "id": 32,
+      "name": "Strawberry Lemonade",
+      "description": "Sweet and tangy lemonade infused with fresh strawberries.",
+      "ingredients": ["lemon juice", "strawberries", "sugar", "water", "ice"],
+      "image": "../images/strawberry_lemonade.png",
+      "allergens": [],
+      "price": 4.49
+    },
+    {
+      "id": 33,
+      "name": "Root Beer Float",
+      "description": "Classic root beer with a scoop of vanilla ice cream.",
+      "ingredients": ["root beer", "vanilla ice cream"],
+      "image": "../images/root_beer_float.png",
+      "allergens": ["dairy"],
+      "price": 5.99
+    }
+  ],
 };
 
 
@@ -452,7 +426,7 @@ app.get('/desserts', (req, res) => {
 
 app.get('/forBiting', (req, res) => {
   res.json(data.forBiting);
-}); 
+});
 
 app.get('/drinks', (req, res) => {
   res.json(data.drinks);
@@ -479,7 +453,7 @@ app.listen(port, () => {
 
 //Employee data in JSON
 const employees = {
-employees:[]
+  employees: []
 };
 
 // Endpoint to register an employee
@@ -503,4 +477,51 @@ app.post('/register', (req, res) => {
   res.status(201).json({ message: "User registered successfully", employee: newEmployee });
 });
 
-app.get('/user')
+
+
+// Endpoint to login
+app.post('/login', (req, res) => {
+  const { email, password } = req.body;
+
+
+  // Check that email and passaword  are present
+  if (!email || !password) {
+    return res.status(400).json({ message: "Email and password are required" });
+  }
+
+
+  //  Search if the emails exists among employees
+  employees.employees.forEach(emp => {
+    if (emp.email === email) {
+      employee = emp; // If email input matches with the email of an employee, then is an employee
+    }
+
+  });
+
+  if (!employee) {
+    //If the email doesn´t exist
+    return res.status(404).json({ message: "User not found" });
+  }
+
+  //Check if email and password matches
+  if (employee.password !== password) {
+    return res.status(401).json({ message: "Invalid password" });
+  }
+
+  //Check  that everything is correct
+
+  const loginSuccess = employee && emmployee.password === password;
+  if (!loginSuccess){
+    return res.status(500).json({ message: "Unexpected error during login" })
+  }
+  else{
+    return res.status(200).json({ message: "Login successful", employee });
+  }
+
+  
+});
+
+
+
+
+
